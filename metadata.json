@@ -1,0 +1,6 @@
+{
+  "name": "Zaro AI Video",
+  "description": "Professional Android AI Video Maker app with Text to Video, Image to Video, multilingual AI Voice (Urdu, Hindi, English), aspect ratio controls, and AdMob/Premium monetization.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

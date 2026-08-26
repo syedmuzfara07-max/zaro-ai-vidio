@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">ज़ारो एआई वीडियो</string>
+    <string name="nav_home">होम</string>
+    <string name="nav_text_video">टेक्स्ट से वीडियो</string>
+    <string name="nav_image_video">फ़ोटो से वीडियो</string>
+    <string name="nav_voice">एआई आवाज़</string>
+    <string name="nav_history">इतिहास</string>
+    <string name="nav_profile">प्रोफ़ाइल</string>
+    
+    <string name="home_hero_title">शानदार एआई वीडियो बनाएं</string>
+    <string name="home_hero_subtitle">अपने विचारों को हिंदी, उर्दू और अंग्रेजी आवाज़ के साथ सिनेमाई वीडियो में बदलें।</string>
+    <string name="btn_generate">एआई वीडियो बनाएं</string>
+    <string name="btn_enhance_prompt">एआई से बेहतर बनाएं</string>
+    <string name="prompt_hint">अपने वीडियो का विवरण यहाँ लिखें...</string>
+    <string name="aspect_ratio">वीडियो अनुपात</string>
+    <string name="video_style">विज़ुअल स्टाइल</string>
+    <string name="camera_motion">कैमरा मोशन</string>
+    <string name="voice_language">आवाज़ की भाषा</string>
+    <string name="watch_ad_reward">विज्ञापन देखें (+2 क्रेडिट)</string>
+    <string name="premium_upgrade">वीआईपी प्रो प्राप्त करें</string>
+    <string name="pro_badge">प्रो</string>
+</resources>

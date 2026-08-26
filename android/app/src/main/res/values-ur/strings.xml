@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">زارو اے آئی ویڈیو</string>
+    <string name="nav_home">ہوم</string>
+    <string name="nav_text_video">ٹیکسٹ سے ویڈیو</string>
+    <string name="nav_image_video">تصویر سے ویڈیو</string>
+    <string name="nav_voice">اے آئی آواز</string>
+    <string name="nav_history">تاریخچہ</string>
+    <string name="nav_profile">پروفائل</string>
+    
+    <string name="home_hero_title">شاندار اے آئی ویڈیوز بنائیں</string>
+    <string name="home_hero_subtitle">اپنے خیالات کو اردو، ہندی اور انگریزی آواز کے ساتھ خوبصورت ویڈیوز میں بدلیں۔</string>
+    <string name="btn_generate">اے آئی ویڈیو بنائیں</string>
+    <string name="btn_enhance_prompt">اے آئی سے بہتر بنائیں</string>
+    <string name="prompt_hint">اپنی ویڈیو کی تفصیل یہاں لکھیں...</string>
+    <string name="aspect_ratio">ویڈیو کا سائز</string>
+    <string name="video_style">ویڈیو کا انداز</string>
+    <string name="camera_motion">کیمرہ موشن</string>
+    <string name="voice_language">آواز کی زبان</string>
+    <string name="watch_ad_reward">اشتہار دیکھیں (+2 کریڈٹ)</string>
+    <string name="premium_upgrade">وی آئی پی پرو حاصل کریں</string>
+    <string name="pro_badge">پرو</string>
+</resources>

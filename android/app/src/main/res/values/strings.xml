@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">Zaro AI Video</string>
+    <string name="nav_home">Home</string>
+    <string name="nav_text_video">Text to Video</string>
+    <string name="nav_image_video">Image to Video</string>
+    <string name="nav_voice">Voice AI</string>
+    <string name="nav_history">History</string>
+    <string name="nav_profile">Profile</string>
+    
+    <string name="home_hero_title">Create Stunning AI Videos</string>
+    <string name="home_hero_subtitle">Turn your ideas into cinematic videos with multilingual AI voiceovers.</string>
+    <string name="btn_generate">Generate AI Video</string>
+    <string name="btn_enhance_prompt">Enhance with AI</string>
+    <string name="prompt_hint">Describe the video you want to generate...</string>
+    <string name="aspect_ratio">Aspect Ratio</string>
+    <string name="video_style">Visual Style</string>
+    <string name="camera_motion">Camera Motion</string>
+    <string name="voice_language">Voice Language</string>
+    <string name="watch_ad_reward">Watch Ad (+2 Credits)</string>
+    <string name="premium_upgrade">Upgrade to VIP Pro</string>
+    <string name="pro_badge">PRO</string>
+</resources>

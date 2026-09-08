@@ -233,40 +233,25 @@ app.post("/api/ai/text-to-speech", async (req, res) => {
 app.post("/api/ai/generate-scene-visual", async (req, res) => {
   try {
     const { prompt, aspectRatio = "9:16", style = "cinematic" } = req.body;
-    const ai = getGeminiClient();
+const width = aspectRatio === "16:9" ? 1344 : aspectRatio === "1:1" ? 1024 : 768;
+    const height = aspectRatio === "16:9" ? 768 : aspectRatio === "1:1" ? 1024 : 1344;
+    const fullPrompt = `${prompt}, style: ${style}, high aesthetic visual composition, cinematic render, master quality`;
+    const seed = Math.floor(Math.random() * 1000000);
+    const pollinationsUrl = `https://image.pollinations.ai/prompt/${encodeURIComponent(fullPrompt)}?width=${width}&height=${height}&nologo=true&seed=${seed}`;
 
-    if (ai) {
-      try {
-        // Use gemini-3.1-flash-lite-image to generate image
-        const imgResponse = await ai.models.generateContent({
-          model: "gemini-2.5-flash-image",
-          contents: {
-            parts: [
-              {
-                text: `${prompt}, style: ${style}, high aesthetic visual composition, cinematic render, master quality`,
-              },
-            ],
-          },
-          config: {
-            imageConfig: {
-              aspectRatio: aspectRatio === "9:16" ? "9:16" : aspectRatio === "16:9" ? "16:9" : "1:1",
-            },
-          },
+    try {
+      const imgRes = await fetch(pollinationsUrl);
+      if (imgRes.ok) {
+        const arrayBuffer = await imgRes.arrayBuffer();
+        const base64 = Buffer.from(arrayBuffer).toString("base64");
+        return res.json({
+          imageUrl: `data:image/jpeg;base64,${base64}`,
+          success: true,
         });
-
-        for (const part of imgResponse.candidates?.[0]?.content?.parts || []) {
-          if (part.inlineData?.data) {
-            return res.json({
-              imageUrl: `data:${part.inlineData.mimeType || "image/png"};base64,${part.inlineData.data}`,
-              success: true,
-            });
-          }
-        }
-      } catch (imgErr) {
-        console.warn("Image gen fallback to procedural artwork generator:", imgErr);
       }
+    } catch (imgErr) {
+      console.warn("Image gen fallback to procedural artwork generator:", imgErr);
     }
-
     return res.json({
       success: false,
       useProceduralCanvas: true,

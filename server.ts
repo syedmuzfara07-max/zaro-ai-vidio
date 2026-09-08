@@ -239,7 +239,7 @@ app.post("/api/ai/generate-scene-visual", async (req, res) => {
       try {
         // Use gemini-3.1-flash-lite-image to generate image
         const imgResponse = await ai.models.generateContent({
-          model: "gemini-3.1-flash-lite-image",
+          model: "gemini-2.5-flash-image",
           contents: {
             parts: [
               {
